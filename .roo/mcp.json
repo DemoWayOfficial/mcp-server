@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "demoway": {
+      "command": "tsx",
+      "args": [
+        "/Users/zsk/code/github.com/DemoWayOfficial/mcp-server/src/index.ts",
+        "--url=http://localhost:3333"
+      ],
+      "env": {
+        "TOKEN": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsdGdvYzR3cTAwMDBiZWZ6N29mdzMwamIiLCJpYXQiOjE3NDM5OTkzMjUsImV4cCI6MTc0NDA4NTcyNSwiYXVkIjoiYXBpLmRlbW93YXkuY24iLCJpc3MiOiJkZW1vd2F5LW5vZGUtYWRtaW4oZGV2ZWxvcG1lbnQpIiwic3ViIjoiand0In0.R8itJHg2uS5Qu9Y7EMOVntgrC4HEKGZSp1GnsDxmywju1P93iI6sbU2w761HIgMKPGLqO406HX6uL1AcSBJ_bHZgRbaL4FY6OD2LLNPOdY1qN7en16N9HLxWSxGUswgzJ9ubddMr0VTLwBqRAKlN7sl_c_4tJzF2fMffRelC2Enntd_zT_eMmYZN5mJN3az5wKl_-kZUZ0e-r7km0Aq9Zh61Cb3kzkx7vmIzGatXsAbEpSx-RRfDDGvczDgkI6lpahpxw3AZb4QPtXpl_b2fxjKvNu9DZJQRTfIZZi64d1mq0OQDIQ-QCjncJk-OkE-9QXlGJ8VX3KPOxv7eY0L7vg",
+        "APP_ID": "clr5yjn2u0013snykif6b7tz4"
+      }
+    }
+  }
+}
