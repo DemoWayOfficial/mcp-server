@@ -15,7 +15,6 @@
     "lint": "eslint src",
     "prepare": "is-ci || husky",
     "semantic-release": "semantic-release",
-    "test": "vitest run --coverage",
     "inspect": "mcp-inspector"
   },
   "repository": {

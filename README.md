@@ -2,9 +2,23 @@
 
 [![npm package][npm-img]][npm-url] [![Build Status][build-img]][build-url] [![Downloads][downloads-img]][downloads-url] [![Issues][issues-img]][issues-url] [![Commitizen Friendly][commitizen-img]][commitizen-url] [![Semantic Release][semantic-release-img]][semantic-release-url]
 
-## Local Development
+## Configuration
 
-### Use AI MCP Client
+```json
+{
+  "mcpServers": {
+    "demoway": {
+      "command": "npx",
+      "args": ["@demoway/mcp-server", "--region={world,china}"],
+      "env": {
+        "DEMOWAY_API_KEY": "<YOUR_API_KEY>"
+      }
+    }
+  }
+}
+```
+
+## Local Development
 
 1. install `tsx` globally
 
@@ -12,23 +26,21 @@
 pnpm --global install tsx
 ```
 
-2. copy `.roo/mcp.json` content to your AI client mcp configuration file, change absolute path to your's
+2. configuration your MCP client
 
-### Use MCP Inspector
-
-```bash
-pnpm inspect
+```json
+{
+  "mcpServers": {
+    "demoway": {
+      "command": "tsx",
+      "args": ["<ABSOLUTE_PATH_TO_SRC_INDEX_FILE>", "--url=http://localhost:3333"],
+      "env": {
+        "DEMOWAY_API_KEY": "<YOUR_API_KEY>"
+      }
+    }
+  }
+}
 ```
-
-set command `pnpm`, set arguments `tsx /Users/zsk/code/github.com/DemoWayOfficial/mcp-server/src/index.ts --url=http://localhost:3333 --appId=<APP_ID> --token=<ACCESS_TOKEN>`, click `Connect`
-
-## Install
-
-```bash
-npm install @demoway/mcp-server
-```
-
-## Configuration
 
 [build-img]: https://github.com/DemoWayOfficial/mcp-server/actions/workflows/release.yml/badge.svg
 [build-url]: https://github.com/DemoWayOfficial/mcp-server/actions/workflows/release.yml
