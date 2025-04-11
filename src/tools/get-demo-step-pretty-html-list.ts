@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { $apiFetch } from '../request';
 import { baseToolExecuter } from './base';
 
-const Name = 'get-demo-step-pretty-html-list';
+const Name = 'get_demo_step_pretty_html_list';
 
 const Description = `
 Use this tool to get demo steps info list which is useful when you need to analyze the demo flow and step content.
