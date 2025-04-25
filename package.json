@@ -1,6 +1,6 @@
 {
   "name": "@demoway/mcp-server",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "DemoWay MCP standalone service",
   "sideEffects": false,
   "type": "module",
