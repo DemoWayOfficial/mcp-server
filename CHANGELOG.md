@@ -1,3 +1,7 @@
+## <small>1.0.1 (2025-04-25)</small>
+
+* fix: no dist publish ([6eb2ac0](https://github.com/DemoWayOfficial/mcp-server/commit/6eb2ac0))
+
 ## 1.0.0 (2025-04-25)
 
 * chore: init ([0d1b02c](https://github.com/DemoWayOfficial/mcp-server/commit/0d1b02c))
