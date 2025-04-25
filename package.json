@@ -1,6 +1,6 @@
 {
   "name": "@demoway/mcp-server",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "DemoWay MCP standalone service",
   "sideEffects": false,
   "type": "module",
@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/DemoWayOfficial/mcp-server#readme",
   "devDependencies": {
+    "@antfu/eslint-config": "^4.11.0",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@modelcontextprotocol/inspector": "^0.8.0",
@@ -71,11 +72,11 @@
     }
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "packageManager": "pnpm@9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4",
   "dependencies": {
-    "@antfu/eslint-config": "^4.11.0",
     "@modelcontextprotocol/sdk": "^1.8.0",
     "minimist": "^1.2.8",
     "ofetch": "^1.4.1",

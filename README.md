@@ -1,6 +1,18 @@
 # @demoway/mcp-server
 
-[![npm package][npm-img]][npm-url] [![Build Status][build-img]][build-url] [![Downloads][downloads-img]][downloads-url] [![Issues][issues-img]][issues-url] [![Commitizen Friendly][commitizen-img]][commitizen-url] [![Semantic Release][semantic-release-img]][semantic-release-url]
+[![npm package][npm-img]][npm-url] [![Downloads][downloads-img]][downloads-url] [![Issues][issues-img]][issues-url] [![Commitizen Friendly][commitizen-img]][commitizen-url]
+
+DemoWay MCP server implementation providing standardized Model Context Protocol (MCP) interface services.
+
+## Available Tools
+
+- `get_demo_step_pretty_html_list`: Get HTML formatted list of demo steps
+
+## Usage
+
+### Obtaining DEMOWAY_API_KEY
+
+TODO
 
 ## Configuration
 
@@ -20,13 +32,13 @@
 
 ## Local Development
 
-1. install `tsx` globally
+1. Install tsx globally
 
 ```bash
 pnpm --global install tsx
 ```
 
-2. configuration your MCP client
+2. Configure MCP client
 
 ```json
 {
@@ -42,15 +54,23 @@ pnpm --global install tsx
 }
 ```
 
-[build-img]: https://github.com/DemoWayOfficial/mcp-server/actions/workflows/release.yml/badge.svg
-[build-url]: https://github.com/DemoWayOfficial/mcp-server/actions/workflows/release.yml
+## Contributing
+
+Pull requests are welcome. Please ensure:
+
+1. Code follows ESLint rules
+2. Add appropriate test cases
+3. Use Commitizen for commit messages
+
+## License
+
+MIT © [DemoWay](https://demoway.com)
+
 [downloads-img]: https://img.shields.io/npm/dt/@demoway/mcp-server
 [downloads-url]: https://www.npmtrends.com/@demoway/mcp-server
 [npm-img]: https://img.shields.io/npm/v/@demoway/mcp-server
 [npm-url]: https://www.npmjs.com/package/@demoway/mcp-server
 [issues-img]: https://img.shields.io/github/issues/DemoWayOfficial/mcp-server
 [issues-url]: https://github.com/DemoWayOfficial/mcp-server/issues
-[semantic-release-img]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
-[semantic-release-url]: https://github.com/semantic-release/semantic-release
 [commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [commitizen-url]: http://commitizen.github.io/cz-cli/
