@@ -1,3 +1,7 @@
+## <small>1.0.2 (2025-04-25)</small>
+
+* fix: package.json bin name ([8614f24](https://github.com/DemoWayOfficial/mcp-server/commit/8614f24))
+
 ## <small>1.0.1 (2025-04-25)</small>
 
 * fix: no dist publish ([6eb2ac0](https://github.com/DemoWayOfficial/mcp-server/commit/6eb2ac0))
