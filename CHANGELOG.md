@@ -1,3 +1,7 @@
+## <small>1.0.3 (2025-04-25)</small>
+
+* fix: add shebang ([8cb98cd](https://github.com/DemoWayOfficial/mcp-server/commit/8cb98cd))
+
 ## <small>1.0.2 (2025-04-25)</small>
 
 * fix: package.json bin name ([8614f24](https://github.com/DemoWayOfficial/mcp-server/commit/8614f24))
