@@ -7,12 +7,10 @@ DemoWay MCP server implementation providing standardized Model Context Protocol 
 ## Available Tools
 
 - `get_demo_step_pretty_html_list`: Get HTML formatted list of demo steps
+- `search_demo_step`: Search step by keyword in a demo
+- `download_demo_step_pretty_html`: Download demo's step pretty html
 
 ## Usage
-
-### Obtaining DEMOWAY_API_KEY
-
-TODO
 
 ## Configuration
 
@@ -21,7 +19,7 @@ TODO
   "mcpServers": {
     "demoway": {
       "command": "npx",
-      "args": ["@demoway/mcp-server", "--region={world,china}"],
+      "args": ["-y", "@demoway/mcp-server", "--region={world,china}"],
       "env": {
         "DEMOWAY_API_KEY": "<YOUR_API_KEY>"
       }

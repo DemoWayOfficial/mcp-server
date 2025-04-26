@@ -83,6 +83,7 @@
     "@modelcontextprotocol/sdk": "^1.8.0",
     "minimist": "^1.2.8",
     "ofetch": "^1.4.1",
+    "radashi": "^12.4.0",
     "zod": "^3.24.2"
   }
 }

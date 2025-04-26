@@ -1,7 +1,7 @@
 import type { ToolCallback } from '@modelcontextprotocol/sdk/server/mcp.js';
 import type { ZodRawShape } from 'zod';
 
-export function baseToolExecuter<Args extends undefined | ZodRawShape = undefined>(fn: ToolCallback<Args>) {
+export function createToolExecuter<Args extends undefined | ZodRawShape = undefined>(fn: ToolCallback<Args>) {
   const wrappedFn = async (...args: any[]) => {
     try {
       // @ts-ignore

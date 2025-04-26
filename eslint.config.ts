@@ -7,6 +7,7 @@ export default combine(
   typescript({
     overrides: {
       'ts/ban-ts-comment': 'off',
+      'ts/no-redeclare': 'off',
     },
   }),
   prettierRecommend,
