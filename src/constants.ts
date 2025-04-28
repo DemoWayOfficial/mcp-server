@@ -1,6 +1,7 @@
 import minimist from 'minimist';
 import { REGION } from './enums';
 import { z } from 'zod';
+export { version as VERSION } from '../package.json';
 
 export const CLI_ARGS_SCHEMA = z.object({
   region: z.string().toUpperCase().default(REGION.CHINA).pipe(z.nativeEnum(REGION)),

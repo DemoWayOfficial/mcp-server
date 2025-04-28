@@ -1,15 +1,13 @@
 import type { FetchContext } from 'ofetch';
 import { createFetch } from 'ofetch';
-import { BASE_URL, API_KEY } from './constants';
+import { BASE_URL, API_KEY, VERSION } from './constants';
 
 export const $apiFetch = createFetch({
   defaults: {
     baseURL: BASE_URL,
-    async onRequest(context: FetchContext): Promise<void> {
-      const headers = new Headers(context.options.headers);
-      headers.set('Authorization', `Bearer ${API_KEY}`);
-
-      context.options.headers = headers;
+    headers: {
+      'User-Agent': `demoway-mcp-server/${VERSION}`,
+      Authorization: `Bearer ${API_KEY}`,
     },
     async onResponse(context: FetchContext) {
       if (context.error) {
