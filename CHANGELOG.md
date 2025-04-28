@@ -1,3 +1,10 @@
+## 1.1.0 (2025-04-28)
+
+* feat: add search_demo_step and download_demo_step_pretty_html tool ([4895abf](https://github.com/DemoWayOfficial/mcp-server/commit/4895abf))
+* feat: remove get_demo_step_pretty_html_list to stay away from ai illusion ([eecd49e](https://github.com/DemoWayOfficial/mcp-server/commit/eecd49e))
+* feat: set version and request ua from package.json ([5293d41](https://github.com/DemoWayOfficial/mcp-server/commit/5293d41))
+* docs: add latest tag to mcp npx args ([3ba8d41](https://github.com/DemoWayOfficial/mcp-server/commit/3ba8d41))
+
 ## <small>1.0.3 (2025-04-25)</small>
 
 * fix: add shebang ([8cb98cd](https://github.com/DemoWayOfficial/mcp-server/commit/8cb98cd))
