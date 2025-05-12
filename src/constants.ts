@@ -4,7 +4,7 @@ import { z } from 'zod';
 export { version as VERSION } from '../package.json';
 
 export const CLI_ARGS_SCHEMA = z.object({
-  region: z.string().toUpperCase().default(REGION.CHINA).pipe(z.nativeEnum(REGION)),
+  region: z.string().toUpperCase().default(REGION.WORLD).pipe(z.nativeEnum(REGION)),
   url: z.string().optional(),
   'api-key': z.string().default(process.env.DEMOWAY_API_KEY as string),
 });
@@ -16,4 +16,4 @@ export const argv = CLI_ARGS_SCHEMA.parse(minimist(process.argv.slice(2)));
 // Retrieve token and baseUrl from environment variables
 export const API_KEY = argv['api-key'];
 export const BASE_URL =
-  argv.url ?? (argv.region === REGION.CHINA ? 'https://api.demoway.cn' : 'https://api.demoway.com');
+  argv.url ?? (argv.region === REGION.WORLD ? 'https://api.demoway.com' : 'https://api.demoway.cn');

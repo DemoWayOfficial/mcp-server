@@ -18,7 +18,7 @@ DemoWay MCP server implementation providing standardized Model Context Protocol 
   "mcpServers": {
     "demoway": {
       "command": "npx",
-      "args": ["-y", "@demoway/mcp-server@latest", "--region={world,china}"],
+      "args": ["-y", "@demoway/mcp-server@latest"],
       "env": {
         "DEMOWAY_API_KEY": "<YOUR_API_KEY>"
       }
