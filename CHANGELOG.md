@@ -1,3 +1,7 @@
+## <small>1.1.1 (2025-05-12)</small>
+
+* fix: default world region ([d3e449c](https://github.com/DemoWayOfficial/mcp-server/commit/d3e449c))
+
 ## 1.1.0 (2025-04-28)
 
 * feat: add search_demo_step and download_demo_step_pretty_html tool ([4895abf](https://github.com/DemoWayOfficial/mcp-server/commit/4895abf))
