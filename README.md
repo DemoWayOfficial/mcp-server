@@ -2,7 +2,7 @@
 
 [![npm package][npm-img]][npm-url] [![Downloads][downloads-img]][downloads-url] [![Issues][issues-img]][issues-url] [![Commitizen Friendly][commitizen-img]][commitizen-url]
 
-DemoWay MCP server implementation providing standardized Model Context Protocol (MCP) interface services.
+Helps you provide any webpage or multiple pages and interactions from a user flow to the AI, so it can modify them based on your instructions and generate new designs or front-end code.
 
 ## Available Tools
 

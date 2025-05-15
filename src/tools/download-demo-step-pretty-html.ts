@@ -11,7 +11,7 @@ import { ofetch } from 'ofetch';
 const Name = 'download_demo_step_pretty_html';
 
 const Description = `
-Use this tool to download demo step's pretty html files to local.
+Use this tool to download the corresponding pretty HTML files of pages from https://app.demoway.cn/demo or https://app.demoway.com/demo to local.
 This tool returns the downloaded steps list data in JSON format that you can then parse and analyze, each item include follow fields:
 - "index": Identify the step order in the demo flow.
 - "stepId": Step unique id in demo flow.
