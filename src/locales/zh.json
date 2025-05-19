@@ -1,0 +1,5 @@
+{
+  "configure-api-key-first": "请先为 DemoWay MCP Server 配置环境变量 {{key}}, 了解更多: https://demoway.cn/docs/ai-proto/mcp/install",
+  "record-page-prompt-content": "请先使用 “DemoWay - 中国版” 浏览器插件 ( https://chromewebstore.google.com/detail/kfjmdibnakajlkcdalknnfckkcgageko ) 录制这个页面，并按提示操作，这样才能让 AI 准确读取到这个页面的完整内容。",
+  "import-page-prompt-content": "请使用 HTML to {{platform}} 将页面导入到 {{platform}}。了解更多：https://demoway.cn/html-to-design"
+}

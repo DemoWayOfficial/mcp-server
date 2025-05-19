@@ -1,7 +1,8 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
-import { $apiFetch } from '../request';
+import { getApiFetch } from '../utils/request';
 import { createToolExecuter } from './base';
+import { parseDemoUrl } from '../utils/url';
 
 const Name = 'search_demo_step';
 
@@ -11,11 +12,13 @@ This tool returns the matched step info in JSON format.
 `;
 
 const Schema = z.object({
-  demoId: z.string().describe('DemoWay demo ID'),
+  url: z.string().describe('demo page url'),
   keyword: z.string().describe('Search keyword'),
 });
 
-const executer = createToolExecuter<typeof Schema.shape>(async ({ demoId, keyword }, extra) => {
+const executer = createToolExecuter<typeof Schema.shape>(async ({ url, keyword }, extra) => {
+  const { demoId } = parseDemoUrl(url);
+  const $apiFetch = getApiFetch(url);
   const result = await $apiFetch(`/api/demo/${demoId}/step/search`, {
     query: {
       keyword,

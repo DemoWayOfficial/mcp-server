@@ -1,19 +1,45 @@
-import minimist from 'minimist';
-import { REGION } from './enums';
 import { z } from 'zod';
+import { TargetConfigSchema } from './schema/target';
+import { unique } from 'radashi';
+
 export { version as VERSION } from '../package.json';
 
-export const CLI_ARGS_SCHEMA = z.object({
-  region: z.string().toUpperCase().default(REGION.WORLD).pipe(z.nativeEnum(REGION)),
-  url: z.string().optional(),
-  'api-key': z.string().default(process.env.DEMOWAY_API_KEY as string),
-});
+const DEFAULT_CONFIG: {
+  targets: TargetConfigSchema[];
+} = {
+  targets: [
+    {
+      app: 'https://app.demoway.com',
+      api: 'https://api.demoway.com',
+      apiKey: process.env.DEMOWAY_API_KEY,
+      apiKeyEnv: 'DEMOWAY_API_KEY',
+    },
+    {
+      app: 'https://app.demoway.cn',
+      api: 'https://api.demoway.cn',
+      apiKey: process.env.DEMOWAY_CN_API_KEY || process.env.DEMOWAY_API_KEY,
+      apiKeyEnv: 'DEMOWAY_CN_API_KEY',
+    },
+  ],
+};
 
-export type CliArgs = z.infer<typeof CLI_ARGS_SCHEMA>;
+const ConfigSchema = z
+  .object({
+    targets: z.array(TargetConfigSchema),
+  })
+  .transform((res) => {
+    // 合并默认配置
+    res.targets = unique([...DEFAULT_CONFIG.targets, ...res.targets], (t) => t.app);
+    // 根据 apiKeyEnv 读取环境变量
+    res.targets.forEach((target) => {
+      if (!target.apiKey && target.apiKeyEnv) {
+        target.apiKey = process.env[target.apiKeyEnv];
+      }
+    });
+    return res;
+  })
+  .catch(DEFAULT_CONFIG);
 
-export const argv = CLI_ARGS_SCHEMA.parse(minimist(process.argv.slice(2)));
-
-// Retrieve token and baseUrl from environment variables
-export const API_KEY = argv['api-key'];
-export const BASE_URL =
-  argv.url ?? (argv.region === REGION.WORLD ? 'https://api.demoway.com' : 'https://api.demoway.cn');
+export const CONFIG = process.env.EXTEND_CONFIG
+  ? (ConfigSchema.safeParse(JSON.parse(process.env.EXTEND_CONFIG)).data ?? DEFAULT_CONFIG)
+  : DEFAULT_CONFIG;
