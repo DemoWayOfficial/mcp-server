@@ -1,4 +1,4 @@
-import { ignores, combine, javascript, typescript } from '@antfu/eslint-config';
+import { ignores, combine, javascript, typescript, imports } from '@antfu/eslint-config';
 import prettierRecommend from 'eslint-plugin-prettier/recommended';
 
 export default combine(
@@ -10,5 +10,6 @@ export default combine(
       'ts/no-redeclare': 'off',
     },
   }),
+  imports(),
   prettierRecommend,
 );
