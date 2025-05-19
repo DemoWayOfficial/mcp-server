@@ -1,3 +1,13 @@
+## 1.2.0 (2025-05-19)
+
+* fix: rename and update page prompt tools for clarity ([b3d3672](https://github.com/DemoWayOfficial/mcp-server/commit/b3d3672))
+* fix: tool method register fn name typo ([e7f142f](https://github.com/DemoWayOfficial/mcp-server/commit/e7f142f))
+* docs: update env configuration in README ([84a60be](https://github.com/DemoWayOfficial/mcp-server/commit/84a60be))
+* feat: add record_page_prompt and import_page_prompt tools ([1543cb3](https://github.com/DemoWayOfficial/mcp-server/commit/1543cb3))
+* feat: support different api origin in one mcp server ([69deb56](https://github.com/DemoWayOfficial/mcp-server/commit/69deb56))
+* chore: upgrade deps, add import eslint rules ([5fa2561](https://github.com/DemoWayOfficial/mcp-server/commit/5fa2561))
+* 优化 download_demo_step_pretty_html 的 prompt ([8af8a3d](https://github.com/DemoWayOfficial/mcp-server/commit/8af8a3d))
+
 ## <small>1.1.1 (2025-05-12)</small>
 
 * fix: default world region ([d3e449c](https://github.com/DemoWayOfficial/mcp-server/commit/d3e449c))
