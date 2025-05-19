@@ -4,10 +4,10 @@ import { createToolExecuter } from './base';
 import { guessRegionFromEnv } from '../utils/region';
 import { getTByRegion } from '../utils/i18n';
 
-const Name = 'record_page_prompt';
+const Name = 'capture_page_prompt';
 
 const Description = `
-Use this tool to prompt the user to first use the DemoWay browser extension to record the page when they request to download or modify a page from a specific URL.
+Use this tool to prompt the user to first use the DemoWay browser extension to capture the page when they request to download or modify a page from a specific URL.
 `;
 
 const Schema = z.object({});
@@ -19,7 +19,7 @@ const executer = createToolExecuter<typeof Schema.shape>(async () => {
     content: [
       {
         type: 'text',
-        text: t('record-page-prompt-content'),
+        text: t('capture-page-prompt-content'),
       },
     ],
   };

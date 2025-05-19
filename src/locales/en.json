@@ -1,5 +1,5 @@
 {
   "configure-api-key-first": "Please configure env {{key}} for the DemoWay MCP Server first. Learn more: https://demoway.com/docs/ai-proto/mcp/install",
-  "record-page-prompt-content": "Please first use the DemoWay browser extension (https://chromewebstore.google.com/detail/demoway/nagpcohhbjekmliolabhhnmgcjndbbdi) to record the page and follow the on-screen instructions. This will allow the AI to accurately read the full content of the page.",
-  "import-page-prompt-content": "Please use HTML to {{platform}} by DemoWay to import the page into Figma. Learn More: https://demoway.com/html-to-figma"
+  "capture-page-prompt-content": "Please first use the DemoWay browser extension (https://chromewebstore.google.com/detail/demoway/nagpcohhbjekmliolabhhnmgcjndbbdi) to capture the page and follow the on-screen instructions. This will allow the AI to accurately read the full content of the page.",
+  "import-page-prompt-content": "Please use HTML to Figma by DemoWay to import the page into Figma.\nSteps:\n1. Install the HTML to MasterGo/Pixso by DemoWay browser extension.\n2. Use the extension to capture the page you need.\n3. In {{platform}}, open the HTML to {{platform}} by DemoWay plugin and import the page captured in Step 2.\nLearn More: https://demoway.com/html-to-figma"
 }
