@@ -1,4 +1,4 @@
-export enum REGION {
-  CHINA = 'CHINA',
-  WORLD = 'WORLD',
+export enum Region {
+  WORLD = 'world',
+  CHINA = 'china',
 }

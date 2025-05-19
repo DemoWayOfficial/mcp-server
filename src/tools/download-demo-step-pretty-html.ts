@@ -1,17 +1,21 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
 import { parallel } from 'radashi';
-import { $apiFetch } from '../request';
+import { getApiFetch } from '../utils/request';
 import fs from 'node:fs';
 import { createToolExecuter } from './base';
 import type { PrettyHTMLStepSchema } from '../schema/pretty-html-step';
 import path from 'node:path';
 import { ofetch } from 'ofetch';
+import { parseDemoUrl } from '../utils/url';
+import { CONFIG } from '../constants';
 
 const Name = 'download_demo_step_pretty_html';
 
+const availableUrls = CONFIG.targets.map((target) => new URL('/demo/:demoId', target.app));
+
 const Description = `
-Use this tool to download the corresponding pretty HTML files of pages from https://app.demoway.cn/demo or https://app.demoway.com/demo to local.
+Use this tool to download the corresponding pretty HTML files of pages from ${availableUrls.join(', ')} to local.
 This tool returns the downloaded steps list data in JSON format that you can then parse and analyze, each item include follow fields:
 - "index": Identify the step order in the demo flow.
 - "stepId": Step unique id in demo flow.
@@ -21,7 +25,7 @@ If neither "stepIds" nor "indexes" are present in the parameters, it means downl
 `;
 
 const Schema = z.object({
-  demoId: z.string().describe('DemoWay demo ID'),
+  url: z.string().describe('demo page url'),
   stepIds: z.string().array().optional().describe('stepId list of the steps to download'),
   indexes: z.number().array().optional().describe('indexes of the steps to download'),
   dir: z.string().describe('Local file system directory absolute path to save the downloaded files'),
@@ -34,7 +38,9 @@ const Schema = z.object({
 });
 
 const executer = createToolExecuter<typeof Schema.shape>(
-  async ({ demoId, dir, indexes, stepIds, filenameTemplate }, extra) => {
+  async ({ url, dir, indexes, stepIds, filenameTemplate }, extra) => {
+    const { demoId } = parseDemoUrl(url);
+    const $apiFetch = getApiFetch(url);
     const steps = await $apiFetch<PrettyHTMLStepSchema[]>(`/api/demo/${demoId}/step-pretty-html-list`, {
       query: {},
       signal: extra.signal,
