@@ -3,7 +3,7 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { registerSearchDemoStep } from './tools/search-demo-step';
 import { registerDownloadDemoStepPrettyHTMLTool } from './tools/download-demo-step-pretty-html';
 import { VERSION } from './constants';
-import { registerRecordPagePrompt } from './tools/capture-page-prompt';
+import { registerCapturePagePrompt } from './tools/capture-page-prompt';
 import { registerImportPagePrompt } from './tools/import-page-prompt';
 
 async function main() {
@@ -14,7 +14,7 @@ async function main() {
 
   registerSearchDemoStep(server);
   registerDownloadDemoStepPrettyHTMLTool(server);
-  registerRecordPagePrompt(server);
+  registerCapturePagePrompt(server);
   registerImportPagePrompt(server);
 
   await server.connect(new StdioServerTransport());

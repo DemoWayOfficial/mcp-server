@@ -25,6 +25,6 @@ const executer = createToolExecuter<typeof Schema.shape>(async () => {
   };
 });
 
-export function registerRecordPagePrompt(server: McpServer) {
+export function registerCapturePagePrompt(server: McpServer) {
   server.tool(Name, Description, Schema.shape, executer);
 }
