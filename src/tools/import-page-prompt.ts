@@ -7,11 +7,11 @@ import { Region } from '../enums';
 const Name = 'import_page_prompt';
 
 const Description = `
-Use this tool when users request to import common front-end files (like html, css, js, astro, vue) to Figma, MasterGo, or Pixso
+Use this tool when users request to import common front-end files (like html, astro, vue, react) to design tools like: Figma, MasterGo, or Pixso, If the user doesn't specify a design tool, ask he first.
 `;
 
 const Schema = z.object({
-  platform: z.enum(['Figma', 'MasterGO', 'Pixso']).describe('The import target platform'),
+  platform: z.enum(['Figma', 'MasterGo', 'Pixso']).describe('The import target platform'),
 });
 
 const executer = createToolExecuter<typeof Schema.shape>(async ({ platform }) => {

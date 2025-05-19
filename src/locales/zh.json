@@ -1,5 +1,5 @@
 {
   "configure-api-key-first": "请先为 DemoWay MCP Server 配置环境变量 {{key}}, 了解更多: https://demoway.cn/docs/ai-proto/mcp/install",
-  "record-page-prompt-content": "请先使用 “DemoWay - 中国版” 浏览器插件 ( https://chromewebstore.google.com/detail/kfjmdibnakajlkcdalknnfckkcgageko ) 录制这个页面，并按提示操作，这样才能让 AI 准确读取到这个页面的完整内容。",
-  "import-page-prompt-content": "请使用 HTML to {{platform}} 将页面导入到 {{platform}}。了解更多：https://demoway.cn/html-to-design"
+  "capture-page-prompt-content": "请先使用 “DemoWay - 中国版” 浏览器插件 ( https://chromewebstore.google.com/detail/kfjmdibnakajlkcdalknnfckkcgageko ) 录制这个页面，并按提示操作，这样才能让 AI 准确读取到这个页面的完整内容。",
+  "import-page-prompt-content": "请使用 HTML to {{platform}} 将页面导入到 {{platform}}。步骤如下：\n1. 安装 HTML to MasterGo/Pixso by DemoWay 浏览器插件\n2.用 HTML to MasterGo/Pixso浏览器插件录制你需要的页面\n3. 在 {{platform}} 里打开 HTML to {{platform}} by DemoWay 插件，导入第二步录制的页面\n了解更多：https://demoway.cn/html-to-design"
 }
