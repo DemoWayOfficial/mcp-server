@@ -42,8 +42,9 @@ pnpm --global install tsx
   "mcpServers": {
     "demoway": {
       "command": "tsx",
-      "args": ["<ABSOLUTE_PATH_TO_SRC_INDEX_FILE>", "--url=http://localhost:3333"],
+      "args": ["<ABSOLUTE_PATH_TO_SRC_INDEX_FILE>"],
       "env": {
+        "EXTEND_CONFIG": "{\"targets\":[<DEV_OR_TESTING_TARGETS>]}",
         "DEMOWAY_API_KEY": "<YOUR_API_KEY>"
       }
     }
