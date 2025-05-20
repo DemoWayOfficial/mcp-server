@@ -1,4 +1,4 @@
-[English](./README.md) | [Français](./README.fr-FR.md) | [Deutsch](./README.de-DE.md) | [日本語](./README.ja-JP.md) | [中文](./README.zh-CN.md)
+[English](./README.md) | [日本語](./README.ja-JP.md) | [中文](./README.zh-CN.md)
 
 # @demoway/mcp-server
 
@@ -10,7 +10,9 @@ DemoWay MCP Server 允许你将现有的单个页面或整个功能流程中的�
 
 ## 如果您是中国区用户
 
-建议直接参看中国区官网的用户手册，以获得更好的速度和体验，功能是一样的：https://demoway.cn/docs/mcp
+🚀 建议直接参看中国区官网的用户手册，以获得更好的速度和体验，功能是一样的：
+
+https://demoway.cn/docs/mcp
 
 ## 可用工具
 
