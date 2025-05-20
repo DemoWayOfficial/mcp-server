@@ -4,20 +4,20 @@
 
 [![npm package][npm-img]][npm-url] [![Downloads][downloads-img]][downloads-url] [![Issues][issues-img]][issues-url] [![Commitizen Friendly][commitizen-img]][commitizen-url]
 
-DemoWay MCP Server allows you to provide an existing single page or all pages in a functional flow to the AI for further modification, generating new page designs or frontend code.
+DemoWay MCP Serverは、既存の単一ページまたは機能フロー内のすべてのページをAIに提供し、さらなる修正、新しいページデザインやフロントエンドコードの生成を可能にします。
 
-You need to install the [DemoWay browser extension](https://chromewebstore.google.com/detail/demoway/nagpcohhbjekmliolabhhnmgcjndbbdi) to use it with the DemoWay MCP Server.
+DemoWay MCP Serverを利用するには、[DemoWayブラウザ拡張機能](https://chromewebstore.google.com/detail/demoway/nagpcohhbjekmliolabhhnmgcjndbbdi)のインストールが必要です。
 
-## Available Tools
+## 利用可能なツール
 
-- `download_demo_step_pretty_html`: Download the captured pages in an AI-friendly HTML format to your local computer for further modification by AI
-- `search_demo_step`: Search for a specific page by keyword in the specified demo
+- `download_demo_step_pretty_html`: キャプチャしたページをAIが扱いやすいHTML形式でローカルコンピュータにダウンロードします
+- `search_demo_step`: 指定したデモ内でキーワードによって特定のページを検索します
 
-## Usage
+## 使い方
 
-### Configuration
+### 設定方法
 
-**For Mac/Linux User**
+**Mac/Linuxユーザー向け**
 
 ```json
 {
@@ -33,7 +33,7 @@ You need to install the [DemoWay browser extension](https://chromewebstore.googl
 }
 ```
 
-**For Windows User**
+**Windowsユーザー向け**
 
 ```json
 {
@@ -49,13 +49,13 @@ You need to install the [DemoWay browser extension](https://chromewebstore.googl
 }
 ```
 
-You can get the `DEMOWAY_API_KEY` from the [dashboard in DemoWay](https://app.demoway.com/dashboard/settings/feature).
+`DEMOWAY_API_KEY`は [DemoWayのダッシュボード](https://app.demoway.com/dashboard/settings/feature) から取得できます。
 
-### Detailed Guide
+### 詳細ガイド
 
 https://demoway.com/docs/mcp
 
-## License
+## ライセンス
 
 MIT ©[DemoWay](https://demoway.com)
 
