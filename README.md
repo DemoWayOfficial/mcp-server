@@ -2,16 +2,18 @@
 
 [![npm package][npm-img]][npm-url] [![Downloads][downloads-img]][downloads-url] [![Issues][issues-img]][issues-url] [![Commitizen Friendly][commitizen-img]][commitizen-url]
 
-Helps you provide any webpage or multiple pages and interactions from a user flow to the AI, so it can modify them based on your instructions and generate new designs or front-end code.
+DemoWay MCP Server allows you to provide an existing single page or all pages in a functional flow to the AI for further modification, generating new page designs or frontend code.
+
+You need to install the [DemoWay browser extension](https://chromewebstore.google.com/detail/demoway/nagpcohhbjekmliolabhhnmgcjndbbdi) to use it with the DemoWay MCP Server.
 
 ## Available Tools
 
-- `search_demo_step`: Search step by keyword in a demo
-- `download_demo_step_pretty_html`: Download demo's step pretty html
+- `download_demo_step_pretty_html`: Download the captured pages in an AI-friendly HTML format to your local computer
+- `search_demo_step`: Search for a specific page by keyword in the specified demo
 
 ## Usage
 
-## Configuration
+### Configuration
 
 ```json
 {
@@ -27,38 +29,11 @@ Helps you provide any webpage or multiple pages and interactions from a user flo
 }
 ```
 
-## Local Development
+You can get the `DEMOWAY_API_KEY` from the [dashboard in DemoWay](https://app.demoway.com/dashboard/settings/feature).
 
-1. Install tsx globally
+### Detailed Guide
 
-```bash
-pnpm --global install tsx
-```
-
-2. Configure MCP client
-
-```json
-{
-  "mcpServers": {
-    "demoway": {
-      "command": "tsx",
-      "args": ["<ABSOLUTE_PATH_TO_SRC_INDEX_FILE>"],
-      "env": {
-        "EXTEND_CONFIG": "{\"targets\":[<DEV_OR_TESTING_TARGETS>]}",
-        "DEMOWAY_API_KEY": "<YOUR_API_KEY>"
-      }
-    }
-  }
-}
-```
-
-## Contributing
-
-Pull requests are welcome. Please ensure:
-
-1. Code follows ESLint rules
-2. Add appropriate test cases
-3. Use Commitizen for commit messages
+https://demoway.com/docs/mcp
 
 ## License
 
