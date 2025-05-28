@@ -1,3 +1,9 @@
+## <small>1.2.1 (2025-05-28)</small>
+
+* fix: get region error in parse demo url ([228ecf2](https://github.com/DemoWayOfficial/mcp-server/commit/228ecf2))
+* docs: add multilingual README files ([a89572d](https://github.com/DemoWayOfficial/mcp-server/commit/a89572d))
+* docs: remove Français and Deutsch links from README.zh-CN.md ([9220715](https://github.com/DemoWayOfficial/mcp-server/commit/9220715))
+
 ## 1.2.0 (2025-05-19)
 
 - fix: rename and update page prompt tools for clarity ([b3d3672](https://github.com/DemoWayOfficial/mcp-server/commit/b3d3672))
