@@ -1,13 +1,17 @@
 import { memo } from 'radashi';
 import { Region } from '../enums';
 
-export const getRegionByUrl = memo((url: string): Region => {
-  const hostname = new URL(url).hostname;
+export const getRegionByHostname = memo((hostname: string): Region => {
   if (hostname.endsWith('demoway.cn')) {
     return Region.CHINA;
   } else {
     return Region.WORLD;
   }
+});
+
+export const getRegionByUrl = memo((url: string): Region => {
+  const hostname = new URL(url).hostname;
+  return getRegionByHostname(hostname);
 });
 
 export function isSameHost(a: string | URL, b: string | URL) {
@@ -31,7 +35,7 @@ export function parseDemoUrl(urlStr: string) {
   }
 
   return {
-    region: getRegionByUrl(url.hostname),
+    region: getRegionByHostname(url.hostname),
     demoId: matched[1],
   };
 }
