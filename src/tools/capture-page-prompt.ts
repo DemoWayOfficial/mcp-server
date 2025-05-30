@@ -7,7 +7,7 @@ import { getTByRegion } from '../utils/i18n';
 const Name = 'capture_page_prompt';
 
 const Description = `
-Use this tool to prompt the user to first use the DemoWay browser extension to capture the page when they request to download or modify a page from a specific URL.
+When a user requests to download or modify a page from a specific URL, and the URL's domain is not app.demoway.cn or app.demoway.com, use this tool to prompt the user to first use the DemoWay browser extension to capture the page.
 `;
 
 const Schema = z.object({});
