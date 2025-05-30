@@ -1,3 +1,7 @@
+## <small>1.2.2 (2025-05-30)</small>
+
+* fix: clarify the usage prerequisites of capture_page_prompt to prevent AI confusion ([452dd07](https://github.com/DemoWayOfficial/mcp-server/commit/452dd07))
+
 ## <small>1.2.1 (2025-05-28)</small>
 
 * fix: get region error in parse demo url ([228ecf2](https://github.com/DemoWayOfficial/mcp-server/commit/228ecf2))
