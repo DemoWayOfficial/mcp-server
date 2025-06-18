@@ -28,9 +28,9 @@ const ConfigSchema = z
     targets: z.array(TargetConfigSchema),
   })
   .transform((res) => {
-    // 合并默认配置
+    // merge default config
     res.targets = unique([...DEFAULT_CONFIG.targets, ...res.targets], (t) => t.app);
-    // 根据 apiKeyEnv 读取环境变量
+    // read env by apiKeyEnv value
     res.targets.forEach((target) => {
       if (!target.apiKey && target.apiKeyEnv) {
         target.apiKey = process.env[target.apiKeyEnv];
